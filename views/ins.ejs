@@ -1,0 +1,45 @@
+<style>
+    body{
+        background-image:url("https://images.medicaldaily.com/sites/medicaldaily.com/files/2014/04/25/group-happiness.jpg");
+        background-size:100% 100%;
+        background-attachment:fixed;
+    }
+    button{
+        padding:40px;
+        margin-left:21.5%;
+        font-size:25px;
+    }
+</style>
+
+<div>
+    <h1 style="text-align:center;font-size:50px;font-family:'impact';"> "Donate as much as you can"</h1>
+</div>
+
+<form action="/pay" method="POST">
+    <script 
+            src = "https://js.instamojo.com/v1/checkout.js"
+            data-purpose = 'Bid Payment'
+			data-amount = '100'
+			data-buyer_name = user.name
+			data-email = user.email
+			data-phone = '9960119040'
+			data-user_id = user.id
+			data-redirect_url = "http://localhost:8080/callback?user_id=${user.id}'"
+            data-webhook_url = '/webhook/'
+    >
+        </script>
+        <script>
+            function onButtonClick(){
+                Instamojo.open('https://instamojo.com/@sarvmanglam')
+            }
+            
+        </script>
+
+        <input type="hidden" custom="Hidden Element" name="hidden">
+    </form>
+    <body>
+        <button onclick ="onButtonClick()">Monetary Donations</button>
+        <button type = "submit" onclick = "location.href= 'http://localhost:8080/other'">Other Donations</button>
+        </br></br></br><p style="font-family:'impact';font-size:30px;text-align:center;">Remember that the happiest people are not those getting more, but those giving more.</p>
+    </body>
+   

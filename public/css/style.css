@@ -1,0 +1,17 @@
+.payment
+{
+    height: 15rem;
+    width: 22rem;
+    position: relative;
+    top:30vh;
+    left: 40vw;
+    background-color: chartreuse;
+}
+.method
+{
+   padding-top: 1rem;
+   margin-left: 8rem;
+}
+h2{
+    margin-left: 3rem;
+}

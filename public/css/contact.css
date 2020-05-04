@@ -1,0 +1,23 @@
+
+p{
+    font-size:20px;
+    }
+    h2{
+    font-family:"impact";
+    font-size:30px;
+    }
+    .add, .fax, .call
+    {
+    border:10px solid black;
+    width:29.8%;
+    height:33%;
+    padding:10px;
+    margin:20px;
+    position:relative;
+    text-align:center;
+    float:left;
+    }
+    
+    
+    
+

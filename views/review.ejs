@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <style>
+
+            body{
+               margin-left:8rem;
+               
+                background-image: url('https://images4.alphacoders.com/251/251038.jpg');
+background-size:100% 100%;
+background-attachment:fixed;
+            }
+        input{
+            margin-top: 0.1rem;
+            margin-bottom: 0.7rem;
+        }
+h3,h1{
+color:#01b0d1;
+}
+#lighter{
+color:lightblue;
+}
+        </style>
+</head>
+
+<body >
+
+    <h1 style= "color:#01b0d1;font-size:70px; margin-bottom: 2rem; ">POST <span id="lighter">REVIEWS</span></h1>
+
+    <form method="post">
+
+        <h3>Name </h3>
+        <input name="name" placeholder="Your Name" style="color:#01b0d1;width: 30rem;" required />
+        <br />
+        <h3>Email id </h3>
+        <input name="email" placeholder="Your Mail Id" style="width: 30rem;" required />
+        <br />
+<h3>Review </h3>
+        <textarea style="height:300px;width:300px; width: 30rem; margin-bottom: 1.5rem;" name="review" placeholder="Write Your Review Here" required></textarea>
+        <br>
+        <button style="width: 30rem; background-color: #01b0d1; height: 3rem; font-size: 1.5rem;">
+            Submit
+        </button>
+    </form>
+
+    <button onclick="location.href= 'http://localhost:8080/'" style="width: 30rem; background-color: #01b0d1; height: 3rem; font-size: 1.5rem;">HOME</button>
+
+    <h1>Reviews</h1>
+    <table  style="border :3px solid;border-color: #01b0d1;width:30rem"class ="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        
+        </thead>
+        <tbody>
+            <% for(var i = 0; i < blogs.length; i++) { %>
+
+            <tr>
+
+                <th scope="row"></th>
+                <td style = "color : white;border :3px solid;border-color: #01b0d1;width:30rem"><%=blogs[i].review %>
+
+                    </br>
+                    @<%=blogs[i].name %>
+                </td>
+
+
+
+            </tr>
+
+            <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>
